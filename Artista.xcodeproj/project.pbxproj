@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B959F8F6776AC04F091C5CD /* Pods_Artista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1876CC098E884243C0A1492C /* Pods_Artista.framework */; };
 		C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247ED24857F3E0042DD35 /* AppDelegate.swift */; };
 		C67247F024857F3E0042DD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247EF24857F3E0042DD35 /* SceneDelegate.swift */; };
-		C67247F224857F3E0042DD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247F124857F3E0042DD35 /* ViewController.swift */; };
 		C67247F524857F3E0042DD35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67247F324857F3E0042DD35 /* Main.storyboard */; };
 		C67247F724857F430042DD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67247F624857F430042DD35 /* Assets.xcassets */; };
 		C67247FA24857F430042DD35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67247F824857F430042DD35 /* LaunchScreen.storyboard */; };
+		C672480A248FFE630042DD35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724809248FFE630042DD35 /* ViewController.swift */; };
+		C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672480D249007A40042DD35 /* CategoryCollectionViewCell.swift */; };
+		C6724810249007DF0042DD35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C672480F249007DF0042DD35 /* GoogleService-Info.plist */; };
+		C6724814249008640042DD35 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724813249008640042DD35 /* CategoryCollectionViewController.swift */; };
+		C67248162490099F0042DD35 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67248152490099F0042DD35 /* FirebaseCollectionReference.swift */; };
+		C672481B24900B130042DD35 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672481A24900B130042DD35 /* Category.swift */; };
+		C672481E24900C7D0042DD35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672481D24900C7D0042DD35 /* Constants.swift */; };
+		C672482024902BFD0042DD35 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672481F24902BFD0042DD35 /* ItemsTableViewController.swift */; };
+		C672482224902D110042DD35 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482124902D110042DD35 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02409449D997B377A97D58FA /* Pods-Artista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.release.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.release.xcconfig"; sourceTree = "<group>"; };
+		1876CC098E884243C0A1492C /* Pods_Artista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67247EA24857F3E0042DD35 /* Artista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67247ED24857F3E0042DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67247EF24857F3E0042DD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C67247F124857F3E0042DD35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C67247F424857F3E0042DD35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C67247F624857F430042DD35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C67247F924857F430042DD35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67247FB24857F430042DD35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6724809248FFE630042DD35 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C672480D249007A40042DD35 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		C672480F249007DF0042DD35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6724813249008640042DD35 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		C67248152490099F0042DD35 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
+		C672481A24900B130042DD35 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C672481D24900C7D0042DD35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C672481F24902BFD0042DD35 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		C672482124902D110042DD35 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.debug.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B959F8F6776AC04F091C5CD /* Pods_Artista.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2E24DD061A3BAAFD042F50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */,
+				02409449D997B377A97D58FA /* Pods-Artista.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A125EDD664BE09D9679B1C44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1876CC098E884243C0A1492C /* Pods_Artista.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C67247E124857F3E0042DD35 = {
 			isa = PBXGroup;
 			children = (
 				C67247EC24857F3E0042DD35 /* Artista */,
 				C67247EB24857F3E0042DD35 /* Products */,
+				2E2E24DD061A3BAAFD042F50 /* Pods */,
+				A125EDD664BE09D9679B1C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +98,53 @@
 			children = (
 				C67247ED24857F3E0042DD35 /* AppDelegate.swift */,
 				C67247EF24857F3E0042DD35 /* SceneDelegate.swift */,
-				C67247F124857F3E0042DD35 /* ViewController.swift */,
+				C6724809248FFE630042DD35 /* ViewController.swift */,
+				C672481824900ADE0042DD35 /* Main Views */,
+				C672481924900AEC0042DD35 /* Custom Cells */,
+				C672481C24900B190042DD35 /* Model */,
+				C672481724900ACD0042DD35 /* Helpers */,
 				C67247F324857F3E0042DD35 /* Main.storyboard */,
 				C67247F624857F430042DD35 /* Assets.xcassets */,
+				C672480F249007DF0042DD35 /* GoogleService-Info.plist */,
 				C67247F824857F430042DD35 /* LaunchScreen.storyboard */,
 				C67247FB24857F430042DD35 /* Info.plist */,
 			);
 			path = Artista;
+			sourceTree = "<group>";
+		};
+		C672481724900ACD0042DD35 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C67248152490099F0042DD35 /* FirebaseCollectionReference.swift */,
+				C672481D24900C7D0042DD35 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C672481824900ADE0042DD35 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6724813249008640042DD35 /* CategoryCollectionViewController.swift */,
+				C672481F24902BFD0042DD35 /* ItemsTableViewController.swift */,
+			);
+			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		C672481924900AEC0042DD35 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C672480D249007A40042DD35 /* CategoryCollectionViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		C672481C24900B190042DD35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C672481A24900B130042DD35 /* Category.swift */,
+				C672482124902D110042DD35 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C67247FE24857F430042DD35 /* Build configuration list for PBXNativeTarget "Artista" */;
 			buildPhases = (
+				18081D25568E61B5EB21A0E0 /* [CP] Check Pods Manifest.lock */,
 				C67247E624857F3E0042DD35 /* Sources */,
 				C67247E724857F3E0042DD35 /* Frameworks */,
 				C67247E824857F3E0042DD35 /* Resources */,
+				A5E33592A00E968D142E960B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67247FA24857F430042DD35 /* LaunchScreen.storyboard in Resources */,
+				C6724810249007DF0042DD35 /* GoogleService-Info.plist in Resources */,
 				C67247F724857F430042DD35 /* Assets.xcassets in Resources */,
 				C67247F524857F3E0042DD35 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +216,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18081D25568E61B5EB21A0E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artista-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E33592A00E968D142E960B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artista/Pods-Artista-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artista/Pods-Artista-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artista/Pods-Artista-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C67247E624857F3E0042DD35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67247F224857F3E0042DD35 /* ViewController.swift in Sources */,
+				C672482224902D110042DD35 /* Item.swift in Sources */,
+				C67248162490099F0042DD35 /* FirebaseCollectionReference.swift in Sources */,
+				C6724814249008640042DD35 /* CategoryCollectionViewController.swift in Sources */,
+				C672480A248FFE630042DD35 /* ViewController.swift in Sources */,
+				C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */,
 				C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */,
+				C672482024902BFD0042DD35 /* ItemsTableViewController.swift in Sources */,
 				C67247F024857F3E0042DD35 /* SceneDelegate.swift in Sources */,
+				C672481B24900B130042DD35 /* Category.swift in Sources */,
+				C672481E24900C7D0042DD35 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +414,7 @@
 		};
 		C67247FF24857F430042DD35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +433,7 @@
 		};
 		C672480024857F430042DD35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02409449D997B377A97D58FA /* Pods-Artista.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
