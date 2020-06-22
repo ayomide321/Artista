@@ -8,6 +8,8 @@
 
 import Foundation
 
+//IDS and Keys
+public let kFILEREFERENCE = "https://console.firebase.google.com/project/artista-3de60/storage/artista-3de60.appspot.com/files"
 
 
 //Firebase Headers

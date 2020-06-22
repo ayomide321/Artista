@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>843723127044-bugudv1bm388nrjg7h0pjvneujs699p9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.843723127044-bugudv1bm388nrjg7h0pjvneujs699p9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBrEaToNAd_KE5Noe-WIn2QvtX51AisahA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>843723127044</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Artista.Artista</string>
+	<key>PROJECT_ID</key>
+	<string>artista-3de60</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artista-3de60.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:843723127044:ios:02aada6d1c63acfed5f851</string>
+	<key>DATABASE_URL</key>
+	<string>https://artista-3de60.firebaseio.com</string>
+</dict>
+</plist>
