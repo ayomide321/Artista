@@ -28,11 +28,20 @@ class AddItemViewController: UIViewController {
     
     var itemImages: [UIImage?] = []
     	
+    //MARK: View lifecycle
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
+        		
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        activityIndicator = NVActivityIndicatorView (frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .lineSpinFadeLoader, color: #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1), padding: nil)
+        
+    }
     //MARK: IBActions
     
     @IBAction func doneBarButtonItemPressed(_ sender: Any) {
@@ -41,8 +50,11 @@ class AddItemViewController: UIViewController {
             saveToFirebase()
             //TODO: Add item to categories
         } else {
-            print("Error: All Fields must be completed")
-            //TODO: Show error to user
+            
+            self.hud.textLabel.text = "All fields are required!"
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2.0)
         }
         
     }
@@ -73,6 +85,9 @@ class AddItemViewController: UIViewController {
     }
     //MARK: Save Item
     private func saveToFirebase() {
+        
+        showLoadingIndicator()
+        
         let item = Item()
         item.id = UUID().uuidString
         item.name = titleTextField.text!
@@ -82,13 +97,40 @@ class AddItemViewController: UIViewController {
         
         //if there is atleast one image
         if itemImages.count > 0 {
-
+            
+            uploadImages(images: itemImages, itemId: item.id) { (imageLinkArray) in
+                item.imageLinks = imageLinkArray
+                saveItemToFireStore(item)
+                
+                self.hideLoadingIndicator()
+                self.popTheView()
+            }
             
         } else {
             //no images to save
             saveItemToFireStore(item)
             popTheView()
             
+        }
+        
+    }
+    
+    //MARK: Activity Indicator
+    
+    private func showLoadingIndicator() {
+        
+        if activityIndicator != nil {
+            self.view.addSubview(activityIndicator!)
+            activityIndicator!.startAnimating()
+        }
+        
+    }
+    
+    private func hideLoadingIndicator() {
+        
+        if activityIndicator != nil {
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
         }
         
     }
