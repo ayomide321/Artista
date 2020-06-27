@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */; };
 		9B959F8F6776AC04F091C5CD /* Pods_Artista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1876CC098E884243C0A1492C /* Pods_Artista.framework */; };
 		C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247ED24857F3E0042DD35 /* AppDelegate.swift */; };
 		C67247F024857F3E0042DD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247EF24857F3E0042DD35 /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		02409449D997B377A97D58FA /* Pods-Artista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.release.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.release.xcconfig"; sourceTree = "<group>"; };
 		1876CC098E884243C0A1492C /* Pods_Artista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C67247EA24857F3E0042DD35 /* Artista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67247ED24857F3E0042DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67247EF24857F3E0042DD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				C672481F24902BFD0042DD35 /* ItemsTableViewController.swift */,
 				C6724823249A9E400042DD35 /* AddItemViewController.swift */,
 				C672482D24A314340042DD35 /* ItemViewController.swift */,
+				4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				C672482624A004A80042DD35 /* Richability.swift in Sources */,
 				C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */,
 				C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */,
+				4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */,
 				C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */,
 				C672482024902BFD0042DD35 /* ItemsTableViewController.swift in Sources */,
 				C672482824A005300042DD35 /* Downloader.swift in Sources */,
