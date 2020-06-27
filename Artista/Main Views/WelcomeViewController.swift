@@ -10,26 +10,53 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-
+    //MARK: - IBOutlets
     
+    @IBOutlet weak var emailText: UITextField!
+    
+    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBOutlet weak var resendButtonOutlet: UIButton!
+    
+
+    //MARK: - View Lifecycle
     
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - IBActions
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        print("cancel")
+        
+        
     }
-    */
-
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        print("login")
+        
+        
+    }
+    @IBAction func registerButton(_ sender: Any) {
+        print("register")
+        
+        
+    }
+    
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+        print("forgot")
+        
+        
+    }
+    
+    @IBAction func resendEmailPressed(_ sender: Any) {
+        print("resend")
+        
+        
+    }
 }

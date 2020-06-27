@@ -309,6 +309,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="oNb-UF-z0S" eventType="touchUpInside" id="oHr-JH-HO4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-BH-9GW">
                                 <rect key="frame" x="20" y="208" width="75" height="36"/>
@@ -321,14 +324,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-7z-MCn">
-                                <rect key="frame" x="-138" y="44" width="382" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="382" id="0Nw-CT-XVP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="oNb-UF-z0S" eventType="touchUpInside" id="aso-WV-2mU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soR-mW-Wt5">
                                 <rect key="frame" x="20" y="118" width="374" height="34"/>
@@ -350,6 +348,9 @@
                                 <state key="normal" title="Resend Email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resendEmailPressed:" destination="oNb-UF-z0S" eventType="touchUpInside" id="e1l-mT-FuM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrj-01-geU">
                                 <rect key="frame" x="137" y="393" width="140" height="30"/>
@@ -362,6 +363,20 @@
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordButton:" destination="oNb-UF-z0S" eventType="touchUpInside" id="HC0-fC-aUx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KU-7z-MCn">
+                                <rect key="frame" x="-2" y="45" width="119" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="382" id="0Nw-CT-XVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="oNb-UF-z0S" eventType="touchUpInside" id="zzN-KR-Dp9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -387,6 +402,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hqh-Zt-lkK"/>
                     </view>
+                    <connections>
+                        <outlet property="emailText" destination="soR-mW-Wt5" id="j62-bD-qbk"/>
+                        <outlet property="passwordText" destination="Ttd-cl-6fl" id="9nG-qa-SoC"/>
+                        <outlet property="resendButtonOutlet" destination="JAU-9T-Otk" id="CJR-TE-L9k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeR-qi-pAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
