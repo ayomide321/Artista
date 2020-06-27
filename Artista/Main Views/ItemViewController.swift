@@ -2,7 +2,7 @@
 //  ItemViewController.swift
 //  Artista
 //
-//  Created by Ayomide Omolewa on 6/23/20.
+//  Created by Ayomide Omolewa Ayo Kuye on 6/23/20.
 //  Copyright © 2020 Ayomide Omolewa. All rights reserved.
 //
 
