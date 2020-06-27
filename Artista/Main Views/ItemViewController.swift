@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 import JGProgressHUD
+
 
 class ItemViewController: UIViewController {
     
@@ -22,7 +24,6 @@ class ItemViewController: UIViewController {
     //MARK: - Variables
     var item: Item!
     var itemImages: [UIImage] = []
-    
     let hud = JGProgressHUD(style: .dark)
     
     
@@ -32,10 +33,61 @@ class ItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
+        setupUI()
+        downloadPictures()
+    }
+    
+    //MARK: - Download Pictures
+    
+    private func downloadPictures() {
+        
+        if item != nil && item.imageLinks != nil {
+            
+            downloadImages(imageUrls: item.imageLinks) { (allImages) in
+                
+                if allImages.count > 0 {
+                    self.itemImages = allImages as! [UIImage]
+                    self.imageCollectionView.reloadData()
+                }
+            }
+        }
+        
+    }
+    
+    //MARK: - Setup UI
+    
+    private func setupUI() {
+        
+        if item != nil {
+            self.title = item.name
+            nameLabel.text = item.name
+            priceLabel.text = convertToCurrency(item.price)
+            descriptionTextView.text = item.description
+            
+            
+        }
+        
     }
     
 
 
+}
+
+extension ItemViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return itemImages.count == 0 ? 1 : itemImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageCollectionViewCell
+        
+        return cell
+    }
+    
+    
+    
+    
 }

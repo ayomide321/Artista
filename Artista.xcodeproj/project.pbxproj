@@ -28,6 +28,7 @@
 		C672482A24A30B740042DD35 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482924A30B740042DD35 /* ItemTableViewCell.swift */; };
 		C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482B24A3103E0042DD35 /* HelperFunctions.swift */; };
 		C672482E24A314340042DD35 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482D24A314340042DD35 /* ItemViewController.swift */; };
+		C672483024A5AF5F0042DD35 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C672482924A30B740042DD35 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		C672482B24A3103E0042DD35 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		C672482D24A314340042DD35 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.debug.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			children = (
 				C672480D249007A40042DD35 /* CategoryCollectionViewCell.swift */,
 				C672482924A30B740042DD35 /* ItemTableViewCell.swift */,
+				C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C672483024A5AF5F0042DD35 /* ImageCollectionViewCell.swift in Sources */,
 				C672482224902D110042DD35 /* Item.swift in Sources */,
 				C672482E24A314340042DD35 /* ItemViewController.swift in Sources */,
 				C67248162490099F0042DD35 /* FirebaseCollectionReference.swift in Sources */,
