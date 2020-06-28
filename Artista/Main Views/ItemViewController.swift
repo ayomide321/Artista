@@ -82,9 +82,34 @@ class ItemViewController: UIViewController {
     @objc func addToBasketButtonPressed()
     {
         
+        downloadBasketFromFirestore("1234") { (basket) in
+            
+            if basket == nil {
+                self.createNewBasket()
+            } else {
+                basket!.itemIDs.append(self.item.id)
+                self.updateBasket(basket: basket!, withValues: [kITEMIDS: basket!.itemIDs])
+            }
+        }
+    }
+    
+    //MARK: - Add to basket
+    
+    private func createNewBasket() {
         
+        let newBasket = Basket()
+        newBasket.id = UUID().uuidString
+        newBasket.ownerID = "1234"
+        newBasket.itemIDs = [self.item.id]
+        saveBasketToFirestore(newBasket)
         
-
+        self.hud.textLabel.text = "Added to basket!"
+        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        self.hud.show(in: self.view)
+        self.hud.dismiss(afterDelay: 1.0)
+    }
+    
+    private func updateBasket(basket: Basket, withValues: [String: Any]) {
         
     }
     
