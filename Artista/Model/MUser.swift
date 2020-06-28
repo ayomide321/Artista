@@ -95,4 +95,25 @@ class MUser {
         return nil
     }
     
+    //MARK: - Login func
+    
+    class func loginUserWith(email: String, password: String, completion: @escaping (_ error: Error?, _ isEmailVerified: Bool) -> Void) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
+            
+            if error == nil {
+                if authDataResult!.user.isEmailVerified {
+                    //to download user from firestore
+                    completion(error, true)
+                } else {
+                    print("email is not verified")
+                    completion(error, false)
+                }
+        } else {
+            completion(error, false)
+            
+        }
+    }
+
+}
 }
