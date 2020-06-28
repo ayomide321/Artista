@@ -27,7 +27,7 @@
         <!--Basket-->
         <scene sceneID="EAe-uO-KSw">
             <objects>
-                <viewController id="LlI-Ae-8p0" sceneMemberID="viewController">
+                <viewController id="LlI-Ae-8p0" customClass="BasketViewController" customModule="Artista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ppF-t9-nCh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,9 @@
                                 <state key="normal" title="CHECK OUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkoutButtonPressed:" destination="LlI-Ae-8p0" eventType="touchUpInside" id="78u-TL-LEy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,6 +160,13 @@
                         <viewLayoutGuide key="safeArea" id="rq8-og-kWo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Basket" id="18w-86-Rau"/>
+                    <connections>
+                        <outlet property="basketTotalPriceLabel" destination="mu5-XR-OBg" id="X9X-1k-mQZ"/>
+                        <outlet property="checkOutButtonOutlet" destination="LM1-nK-Ba9" id="aRd-GM-J7E"/>
+                        <outlet property="footerView" destination="8uu-Wv-onm" id="vNI-Fv-cY1"/>
+                        <outlet property="tableView" destination="Jzf-Nt-ehl" id="wKh-6o-h2T"/>
+                        <outlet property="totalItemsLabel" destination="ire-vx-zMJ" id="Ufb-T1-oyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ej5-3t-etv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,7 @@
 		4E12BC6324A849450071DBA2 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12BC6224A849450071DBA2 /* MUser.swift */; };
 		9B959F8F6776AC04F091C5CD /* Pods_Artista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1876CC098E884243C0A1492C /* Pods_Artista.framework */; };
 		C6139C4F24A83E6000A0E193 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6139C4E24A83E6000A0E193 /* Basket.swift */; };
+		C6139C5124A9045B00A0E193 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6139C5024A9045B00A0E193 /* BasketViewController.swift */; };
 		C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247ED24857F3E0042DD35 /* AppDelegate.swift */; };
 		C67247F024857F3E0042DD35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67247EF24857F3E0042DD35 /* SceneDelegate.swift */; };
 		C67247F524857F3E0042DD35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67247F324857F3E0042DD35 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4E12BC6224A849450071DBA2 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		C6139C4E24A83E6000A0E193 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		C6139C5024A9045B00A0E193 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		C67247EA24857F3E0042DD35 /* Artista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67247ED24857F3E0042DD35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67247EF24857F3E0042DD35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				C672481F24902BFD0042DD35 /* ItemsTableViewController.swift */,
 				C6724823249A9E400042DD35 /* AddItemViewController.swift */,
 				C672482D24A314340042DD35 /* ItemViewController.swift */,
+				C6139C5024A9045B00A0E193 /* BasketViewController.swift */,
 				4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */,
 			);
 			path = "Main Views";
@@ -302,6 +305,7 @@
 				C672480A248FFE630042DD35 /* ViewController.swift in Sources */,
 				C672482624A004A80042DD35 /* Richability.swift in Sources */,
 				C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */,
+				C6139C5124A9045B00A0E193 /* BasketViewController.swift in Sources */,
 				C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */,
 				4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */,
 				C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */,
