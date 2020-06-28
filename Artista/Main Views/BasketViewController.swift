@@ -67,21 +67,50 @@ class BasketViewController: UIViewController {
             downloadItems(basket!.itemIDs) { (allItems) in
                 
                 self.allItems = allItems
+                self.updateTotalLabels(false)
                 self.tableView.reloadData()
             }
         }
     }
+    
+    //MARK: Helper functions
+    
+    private func updateTotalLabels(_ isEmpty: Bool) {
+        
+        if isEmpty {
+            totalItemsLabel.text = "0"
+        } else {
+            totalItemsLabel.text = "\(allItems.count)"
+        }
+        basketTotalPriceLabel.text = returnBasketTotalPrice()
+        
+        //TODO: Update the button status
+    }
+    
+    private func returnBasketTotalPrice() -> String {
+        
+        var totalPrice = 0.0
+        
+        for item in allItems {
+            totalPrice += item.price
+        }
+        return "Total Price: " + convertToCurrency(totalPrice)
+    }
+    
 }
 
 
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return allItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        
+        cell.generateCell(allItems[indexPath.row])
+        return cell
     }
     
     

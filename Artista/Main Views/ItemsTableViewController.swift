@@ -68,7 +68,7 @@ class ItemsTableViewController: UITableViewController {
         if segue.identifier == "ItemToAddItemSeg" {
         
             let vc = segue.destination as! AddItemViewController
-            vc.category = category!
+            vc.category = category
         }
     }
     
