@@ -79,7 +79,43 @@ class WelcomeViewController: UIViewController {
         
     }
     
+    //MARK: - Login User
     
+    private func loginUser() {
+        
+        showLoadingIndicator()
+        
+        MUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error, isEmailVerified) in
+            
+            if error == nil {
+                
+                if  isEmailVerified {
+                    self.dissmissView()
+                    print("Email is Verified")
+                } else {
+                    self.hud.textLabel.text = "Please Verify Email!"
+                    self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                    self.hud.show(in: self.view)
+                    self.hud.dismiss(afterDelay: 2.0)
+                }
+            
+                
+                
+            } else {
+                print("error logging in the user", error!.localizedDescription)
+                self.hud.textLabel.text = error!.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+            }
+            
+            
+            self.hideLoadingIndicator()
+        
+        }
+        
+    }
     
     
     
