@@ -116,4 +116,25 @@ class MUser {
     }
 
 }
+    //MARK: - Register func
+    
+    class func registerUserWith(email: String, password: String, completion: @escaping (_ error: Error?) ->Void) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) {
+            (AuthDataResult, error) in
+            
+            completion(error)
+            
+            if error == nil {
+                
+                //send email verification
+                AuthDataResult?.user.sendEmailVerification(completion: { (error) in
+                    print("auth email verification error : ", error?.localizedDescription)
+                })
+            }
+            
+        }
+         
+    }
+    
 }
