@@ -1,8 +1,8 @@
-//
+///
 //  WelcomeViewController.swift
 //  Artista
 ///
-//  Created by Ayo Kuye on 6/27/20.
+//  Created by Ayodele Kuye on 6/27/20.
 //  Copyright © 2020 Ayomide Omolewa. All rights reserved.
 //
 
