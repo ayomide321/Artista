@@ -50,7 +50,15 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         print("login")
-        
+        if textFieldsHaveText() {
+            
+            loginUser()
+        } else {
+            hud.textLabel.text = "All Field are Required"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
         
     }
     
