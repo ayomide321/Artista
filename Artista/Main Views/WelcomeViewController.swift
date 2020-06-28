@@ -84,6 +84,26 @@ class WelcomeViewController: UIViewController {
     private func registerUser() {
         
         showLoadingIndicator()
+        
+        MUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            
+            if error == nil {
+                self.hud.textLabel.text = "Verification Email Sent"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            } else {
+                print("error registering", error?.localizedDescription)
+                self.hud.textLabel.text = error?.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            }
+            
+            
+            self.hideLoadingIndicator()
+            
+        }
     
     }
     
