@@ -77,6 +77,22 @@ class MUser {
    
     }
     
+    
+    //MARK: - Return Current User
 
+    class func currentID() -> String {
+        return Auth.auth().currentUser!.uid
+    }
+    
+    class func currentUser() -> MUser? {
+        if Auth.auth().currentUser != nil {
+            if let dictionary = UserDefaults.standard.object(forKey: kCURRENTUSER) {
+                return MUser.init(_dictionary: dictionary as! NSDictionary)
+            }
+            
+        }
+        
+        return nil
+    }
     
 }
