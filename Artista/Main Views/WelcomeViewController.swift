@@ -79,6 +79,10 @@ class WelcomeViewController: UIViewController {
         
     }
     
+    
+    
+    
+    
     //MARK: - Register User
     
     private func registerUser() {
