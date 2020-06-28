@@ -84,7 +84,7 @@ class BasketViewController: UIViewController {
         }
         basketTotalPriceLabel.text = returnBasketTotalPrice()
         
-        //TODO: Update the button status
+        checkoutButtonStatusUpdate()
     }
     
     private func returnBasketTotalPrice() -> String {
@@ -95,6 +95,25 @@ class BasketViewController: UIViewController {
             totalPrice += item.price
         }
         return "Total Price: " + convertToCurrency(totalPrice)
+    }
+    
+    //MARK: - Control checkoutButton
+    private func checkoutButtonStatusUpdate() {
+        
+        checkOutButtonOutlet.isEnabled = allItems.count > 0
+        
+        if checkOutButtonOutlet.isEnabled {
+            
+            checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+        } else {
+            disableCheckoutButton()
+        }
+        
+    }
+    
+    private func disableCheckoutButton() {
+        checkOutButtonOutlet.isEnabled = false
+        checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
     }
     
 }
