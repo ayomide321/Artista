@@ -116,6 +116,18 @@ class BasketViewController: UIViewController {
         checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
     }
     
+    private func removeItemFromBasket(itemID: String) {
+        
+        for i in 0..<basket!.itemIDs.count {
+            
+            if itemID == basket!.itemIDs[i] {
+                basket!.itemIDs.remove(at: i)
+                
+                return
+            }
+        }
+    }
+    
 }
 
 
@@ -132,7 +144,34 @@ extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    //MARK: - UITableView Delegate
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let itemToDelete = allItems[indexPath.row]
+            
+            allItems.remove(at: indexPath.row)
+            tableView.reloadData()
+            removeItemFromBasket(itemID: itemToDelete.id)
+            
+            updateBasketInFirestore(basket!, withValues: [kITEMIDS: basket!.itemIDs]) { (error) in
+                
+                if error != nil {
+                    print ("Error: Update basket function could not be completed", error!.localizedDescription)
+                }
+                
+                self.getBasketItems()
+            }
+            
+            
+        }
+    }
     
 }
