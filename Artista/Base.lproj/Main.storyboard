@@ -689,7 +689,7 @@
         <!--Profile-->
         <scene sceneID="VPl-S4-GNH">
             <objects>
-                <tableViewController id="HxZ-Pj-zaM" sceneMemberID="viewController">
+                <tableViewController id="HxZ-Pj-zaM" customClass="ProfileTableViewController" customModule="Artista" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tde-hg-4GF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -763,6 +763,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Profile" id="PMJ-ts-LHW"/>
+                    <connections>
+                        <outlet property="finishRegistrationButtonOutlet" destination="ZmJ-71-XIs" id="szL-wk-yAv"/>
+                        <outlet property="purchaseHistoryBurronOutlet" destination="hmC-pQ-MFh" id="N6r-54-RkO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFO-YE-Ppo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
