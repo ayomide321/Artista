@@ -208,6 +208,6 @@ func saveUserLocally(mUserDictionary: NSDictionary) {
 
 func userDictionaryFrom(user: MUser) -> NSDictionary {
     
-    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kFULLNAME as NSCopying, kFULLNAME as NSCopying, kONBOARD as NSCopying, kPURCHASEITEMIDS as NSCopying])
+    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kONBOARD as NSCopying, kPURCHASEITEMIDS as NSCopying])
 }
 
