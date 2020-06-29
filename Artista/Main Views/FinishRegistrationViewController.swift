@@ -48,7 +48,21 @@ class FinishRegistrationViewController: UIViewController {
     //
     @objc func textFieldDidchange(_ textField: UITextField) {
         
-        print("Text field did change")
+        updateDoneButtonStatus()
+    }
+    
+    //MARK: - Helper
+    private func updateDoneButtonStatus() {
+        
+        if nameTextField.text != "" && lastnameTextField.text != "" && addressTextField.text != "" {
+            
+            doneButtonOutlet.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+            doneButtonOutlet.isEnabled = true
+        } else {
+            doneButtonOutlet.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            doneButtonOutlet.isEnabled = false
+        }
+        
     }
     
 }
