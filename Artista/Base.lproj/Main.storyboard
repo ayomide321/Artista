@@ -775,10 +775,10 @@
             </objects>
             <point key="canvasLocation" x="1739.1304347826087" y="2215.8482142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish Registration View Controller-->
         <scene sceneID="KGs-2W-GZW">
             <objects>
-                <viewController id="aAA-aw-nRx" sceneMemberID="viewController">
+                <viewController id="aAA-aw-nRx" customClass="FinishRegistrationViewController" customModule="Artista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DjH-bG-rcg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -797,6 +797,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="aAA-aw-nRx" eventType="touchUpInside" id="KJU-cq-eyl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKs-Ou-fMC">
                                 <rect key="frame" x="16" y="62" width="382" height="34"/>
@@ -812,6 +815,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-Sg-Tb2">
                                 <rect key="frame" x="16" y="194" width="382" height="30"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="aAA-aw-nRx" eventType="touchUpInside" id="NQq-BM-1n7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" id="Yfw-93-JGI">
                                 <rect key="frame" x="18" y="146" width="378" height="34"/>
@@ -837,6 +843,12 @@
                         <viewLayoutGuide key="safeArea" id="NJ8-ax-VXI"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wg5-HI-LMY"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="Yfw-93-JGI" id="XrL-te-XE8"/>
+                        <outlet property="doneButtonOutlet" destination="b7P-Sg-Tb2" id="DtV-fK-p7e"/>
+                        <outlet property="lastnameTextField" destination="Xog-bO-bsq" id="g9D-Vm-UyN"/>
+                        <outlet property="nameTextField" destination="dKs-Ou-fMC" id="6Rt-s0-8qZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0J-fD-ZRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

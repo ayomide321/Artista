@@ -34,6 +34,7 @@
 		C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482B24A3103E0042DD35 /* HelperFunctions.swift */; };
 		C672482E24A314340042DD35 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482D24A314340042DD35 /* ItemViewController.swift */; };
 		C672483024A5AF5F0042DD35 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */; };
+		C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		C672482B24A3103E0042DD35 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		C672482D24A314340042DD35 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.debug.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +158,7 @@
 				C6724823249A9E400042DD35 /* AddItemViewController.swift */,
 				C672482D24A314340042DD35 /* ItemViewController.swift */,
 				C6139C5024A9045B00A0E193 /* BasketViewController.swift */,
-				4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */,
+				C690080624AA8C1800ED8817 /* Login View */,
 				C6139C5224AA5A0500A0E193 /* ProfileTableViewController.swift */,
 			);
 			path = "Main Views";
@@ -181,6 +183,15 @@
 				C6139C4E24A83E6000A0E193 /* Basket.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C690080624AA8C1800ED8817 /* Login View */ = {
+			isa = PBXGroup;
+			children = (
+				4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */,
+				C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */,
+			);
+			name = "Login View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */,
 				C6139C5124A9045B00A0E193 /* BasketViewController.swift in Sources */,
 				C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */,
+				C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */,
 				4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */,
 				C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */,
 				C672482024902BFD0042DD35 /* ItemsTableViewController.swift in Sources */,
