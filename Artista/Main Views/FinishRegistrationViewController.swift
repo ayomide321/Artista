@@ -36,7 +36,7 @@ class FinishRegistrationViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-    
+        finishOnboarding()
     
     }
     
@@ -63,6 +63,29 @@ class FinishRegistrationViewController: UIViewController {
             doneButtonOutlet.isEnabled = false
         }
         
+    }
+    
+    private func finishOnboarding() {
+        
+        let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : lastnameTextField.text!, kONBOARD : true, kFULLADDRESS : addressTextField.text!, kFULLNAME : (nameTextField.text! + " " + lastnameTextField.text!)] as [String:Any]
+        updateCurrentUserInFirestore(withValues: withValues) { (error) in
+            
+            if error == nil {
+                self.hud.textLabel.text = "Registration Complete!"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                
+                print("error updating user \(error!.localizedDescription)")
+                
+                self.hud.textLabel.text = error!.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)            }
+        }
     }
     
 }
