@@ -103,7 +103,9 @@ class MUser {
             
             if error == nil {
                 if authDataResult!.user.isEmailVerified {
-                    //to download user from firestore
+                    
+                    downloadUserFromFirestore(userId: authDataResult!.user.uid, email: email)
+                   
                     completion(error, true)
                 } else {
                     print("email is not verified")
@@ -140,6 +142,31 @@ class MUser {
 }
 
 
+//MARK: - Download User
+
+func downloadUserFromFirestore(userId: String, email: String) {
+    FirebaseReference(.User).document(userId).getDocument { (snapshot, error) in
+        
+        guard let snapshot = snapshot else { return }
+        
+        if snapshot.exists {
+            print("download current user from firestore")
+            saveUserLocally(mUserDictionary: snapshot.data()! as NSDictionary)
+        } else {
+            // There is No User, Save New in Firestore
+            
+            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "")
+            saveUserLocally(mUserDictionary: userDictionaryFrom(user: user))
+            saveUserToFirestore(mUSER: user)
+            
+        }
+        
+        
+    }
+    
+}
+
+
 //MARK: - Save User to Fire Base
 
 func saveUserToFirestore(mUSER: MUser) {
@@ -166,3 +193,4 @@ func userDictionaryFrom(user: MUser) -> NSDictionary {
     
     return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kFULLNAME as NSCopying, kFULLNAME as NSCopying, kONBOARD as NSCopying, kPURCHASEITEMIDS as NSCopying])
 }
+
