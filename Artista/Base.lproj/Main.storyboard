@@ -707,6 +707,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmJ-71-XIs">
                                                     <rect key="frame" x="16" y="7" width="359.5" height="30"/>
                                                     <state key="normal" title="Finish Registration"/>
+                                                    <connections>
+                                                        <segue destination="aAA-aw-nRx" kind="showDetail" id="c4f-cB-WYX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -771,6 +774,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFO-YE-Ppo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1739.1304347826087" y="2215.8482142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KGs-2W-GZW">
+            <objects>
+                <viewController id="aAA-aw-nRx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DjH-bG-rcg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onboarding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xou-vn-9Bl">
+                                <rect key="frame" x="16" y="20" width="382" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q35-ta-U4M">
+                                <rect key="frame" x="16" y="20" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Fk-kI-doT"/>
+                                    <constraint firstAttribute="width" constant="72" id="EUh-cE-aFO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKs-Ou-fMC">
+                                <rect key="frame" x="16" y="62" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="Xog-bO-bsq">
+                                <rect key="frame" x="18" y="104" width="378" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-Sg-Tb2">
+                                <rect key="frame" x="16" y="194" width="382" height="30"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" id="Yfw-93-JGI">
+                                <rect key="frame" x="18" y="146" width="378" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b7P-Sg-Tb2" firstAttribute="top" secondItem="Yfw-93-JGI" secondAttribute="bottom" constant="14" id="APe-CD-erD"/>
+                            <constraint firstItem="NJ8-ax-VXI" firstAttribute="trailing" secondItem="xou-vn-9Bl" secondAttribute="trailing" constant="16" id="FCN-3K-WUB"/>
+                            <constraint firstItem="b7P-Sg-Tb2" firstAttribute="leading" secondItem="NJ8-ax-VXI" secondAttribute="leading" constant="16" id="O4f-HP-H32"/>
+                            <constraint firstItem="xou-vn-9Bl" firstAttribute="top" secondItem="NJ8-ax-VXI" secondAttribute="top" constant="20" id="Xe9-Df-E9H"/>
+                            <constraint firstItem="q35-ta-U4M" firstAttribute="top" secondItem="NJ8-ax-VXI" secondAttribute="top" constant="20" id="XpK-gE-aLQ"/>
+                            <constraint firstItem="dKs-Ou-fMC" firstAttribute="top" secondItem="xou-vn-9Bl" secondAttribute="bottom" constant="8" id="aA8-Qc-Mrz"/>
+                            <constraint firstItem="q35-ta-U4M" firstAttribute="leading" secondItem="NJ8-ax-VXI" secondAttribute="leading" constant="16" id="aXQ-2i-vCc"/>
+                            <constraint firstItem="dKs-Ou-fMC" firstAttribute="leading" secondItem="NJ8-ax-VXI" secondAttribute="leading" constant="16" id="cV8-xp-7MB"/>
+                            <constraint firstItem="NJ8-ax-VXI" firstAttribute="trailing" secondItem="b7P-Sg-Tb2" secondAttribute="trailing" constant="16" id="hV0-hv-OdH"/>
+                            <constraint firstItem="NJ8-ax-VXI" firstAttribute="trailing" secondItem="dKs-Ou-fMC" secondAttribute="trailing" constant="16" id="w4a-D4-aSO"/>
+                            <constraint firstItem="xou-vn-9Bl" firstAttribute="leading" secondItem="NJ8-ax-VXI" secondAttribute="leading" constant="16" id="yyV-0L-hqm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NJ8-ax-VXI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wg5-HI-LMY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0J-fD-ZRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433.3333333333335" y="2404.6875"/>
         </scene>
         <!--Profile-->
         <scene sceneID="fQh-H4-yuA">
