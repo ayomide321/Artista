@@ -862,7 +862,7 @@
         <!--Edit Profile-->
         <scene sceneID="rOF-vq-Ike">
             <objects>
-                <viewController id="Ept-cY-I8p" sceneMemberID="viewController">
+                <viewController id="Ept-cY-I8p" customClass="EditProfileViewController" customModule="Artista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8G-WR-ncn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -874,6 +874,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameTextField:" destination="q2J-2W-Y3O" eventType="editingDidEnd" id="XqY-yt-fHS"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="sjn-pF-xtc">
                                 <rect key="frame" x="16" y="165" width="382" height="34"/>
@@ -891,6 +894,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="Ept-cY-I8p" eventType="touchUpInside" id="lWx-ji-9XN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" id="gAz-of-bfe">
                                 <rect key="frame" x="16" y="215" width="382" height="34"/>
@@ -914,10 +920,19 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="SS0-Z4-emj">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="WdT-F3-Qye">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="Ept-cY-I8p" id="bOp-Rg-Zb8"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="gAz-of-bfe" id="I4S-U1-jZ5"/>
+                        <outlet property="lastnameTextField" destination="sjn-pF-xtc" id="ijR-Ov-XyI"/>
+                        <outlet property="nameTextField" destination="YFG-cJ-CU9" id="70h-U4-jvE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AJ-0u-dpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="q2J-2W-Y3O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3278.2608695652175" y="2428.7946428571427"/>
         </scene>

@@ -110,7 +110,8 @@ class ProfileTableViewController: UITableViewController {
     }
     
     private func goToEditProfile() {
-        print("edit profile")
+        
+        performSegue(withIdentifier: "profileToEditSeg", sender: self)
     }
     
 }
