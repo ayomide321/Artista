@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */; };
 		4E12BC6324A849450071DBA2 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E12BC6224A849450071DBA2 /* MUser.swift */; };
+		4E412C5524AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E412C5424AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift */; };
 		9B959F8F6776AC04F091C5CD /* Pods_Artista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1876CC098E884243C0A1492C /* Pods_Artista.framework */; };
 		C6139C4F24A83E6000A0E193 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6139C4E24A83E6000A0E193 /* Basket.swift */; };
 		C6139C5124A9045B00A0E193 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6139C5024A9045B00A0E193 /* BasketViewController.swift */; };
@@ -43,6 +44,7 @@
 		1876CC098E884243C0A1492C /* Pods_Artista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E12BC6024A70A8F0071DBA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4E12BC6224A849450071DBA2 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		4E412C5424AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryTableViewController.swift; sourceTree = "<group>"; };
 		C6139C4E24A83E6000A0E193 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		C6139C5024A9045B00A0E193 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		C6139C5224AA5A0500A0E193 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				C690080624AA8C1800ED8817 /* Login View */,
 				C6139C5224AA5A0500A0E193 /* ProfileTableViewController.swift */,
 				C690080724AACAFF00ED8817 /* EditProfileViewController.swift */,
+				4E412C5424AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				C6724814249008640042DD35 /* CategoryCollectionViewController.swift in Sources */,
 				C6139C4F24A83E6000A0E193 /* Basket.swift in Sources */,
 				C672480A248FFE630042DD35 /* ViewController.swift in Sources */,
+				4E412C5524AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift in Sources */,
 				C672482624A004A80042DD35 /* Richability.swift in Sources */,
 				C690080824AACAFF00ED8817 /* EditProfileViewController.swift in Sources */,
 				C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */,
