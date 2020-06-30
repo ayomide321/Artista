@@ -37,9 +37,12 @@ class BasketViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        //TODO: Check if user is logged in
         
-        loadBasketFromFirestore()
+        if MUser.currentUser() != nil {
+            loadBasketFromFirestore()
+        } else {
+            self.updateTotalLabels(true)
+        }
     }
     
 
@@ -53,7 +56,7 @@ class BasketViewController: UIViewController {
     //MARK: - Download basket
     private func loadBasketFromFirestore() {
         
-        downloadBasketFromFirestore("1234") { (basket) in
+        downloadBasketFromFirestore(MUser.currentID()) { (basket) in
             
             self.basket = basket
             self.getBasketItems()
