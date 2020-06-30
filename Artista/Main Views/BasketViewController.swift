@@ -52,7 +52,11 @@ class BasketViewController: UIViewController {
         
         if MUser.currentUser()!.onBoard {
             
-            // Proceed with Purchase
+            tempFunction()
+            
+            addItemstoPurchaseHistory(self.purchasedItemIDs)
+            emptyTheBasket()
+            
         
         } else {
             
@@ -89,6 +93,14 @@ class BasketViewController: UIViewController {
     }
     
     //MARK: Helper functions
+    
+    
+    func tempFunction() {
+        for item in allItems {
+            
+            purchasedItemIDs.append(item.id)
+        }
+    }
     
     private func updateTotalLabels(_ isEmpty: Bool) {
         
