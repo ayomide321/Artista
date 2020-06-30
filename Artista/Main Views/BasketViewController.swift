@@ -50,6 +50,18 @@ class BasketViewController: UIViewController {
     
     @IBAction func checkoutButtonPressed(_ sender: Any) {
         
+        if MUser.currentUser()!.onBoard {
+            
+            // Proceed with Purchase
+        
+        } else {
+            
+            self.hud.textLabel.text = "please complete your profile!"
+            self.hud.indicatorView = JGProgressHUDIndicatorView()
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2.0)
+            
+        }
         
     }
     
@@ -98,6 +110,40 @@ class BasketViewController: UIViewController {
             totalPrice += item.price
         }
         return "Total Price: " + convertToCurrency(totalPrice)
+    }
+    
+    private func emptyTheBasket() {
+        
+        purchasedItemIDs.removeAll()
+        allItems.removeAll()
+        tableView.reloadData()
+        
+        basket!.itemIDs = []
+        
+        updateBasketInFirestore(basket!, withValues: [kITEMIDS : basket!.itemIDs]) { (error) in
+            
+            if error != nil {
+                print("Error updating basket", error!.localizedDescription)
+            }
+            self.getBasketItems()
+        }
+        
+    }
+    
+    private func addItemstoPurchaseHistory(_ itemIds: [String]) {
+        
+        if MUser.currentID() != nil {
+            
+            let newItemIds = MUser.currentUser()!.purchasedItemIds + itemIds
+            
+            updateCurrentUserInFirestore(withValues: [kPURCHASEITEMIDS : newItemIds]) { (error) in
+                if error != nil {
+                    print("Error adding purchased items ", error?.localizedDescription)
+                }
+                
+            }
+                
+        }
     }
     
     //MARK: - Navigation
