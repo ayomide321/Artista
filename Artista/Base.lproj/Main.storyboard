@@ -8,21 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="aPm-n9-CoE">
             <objects>
                 <viewController id="UFh-Zv-mfZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDU-GB-7Vv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-74-llB">
+                                <rect key="frame" x="0.0" y="196" width="414" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-9t-puA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-AC-agG">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-pn-qVj">
+                                        <rect key="frame" x="8" y="53" width="398" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="EQl-1y-upk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="X8f-Qx-Chs"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Search" id="xXq-cv-QTm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="e03-7H-1Hn"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEK-FN-Fvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="808"/>
+            <point key="canvasLocation" x="1668.1159420289857" y="807.58928571428567"/>
         </scene>
         <!--Basket-->
         <scene sceneID="EAe-uO-KSw">
@@ -254,7 +287,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="7RM-V4-a7R" kind="relationship" relationship="viewControllers" id="BPP-9v-V6G"/>
-                        <segue destination="UFh-Zv-mfZ" kind="relationship" relationship="viewControllers" id="s1B-Kn-SCe"/>
+                        <segue destination="1gO-dh-gpE" kind="relationship" relationship="viewControllers" id="s1B-Kn-SCe"/>
                         <segue destination="yxM-MK-jHu" kind="relationship" relationship="viewControllers" id="Lmg-kK-mJM"/>
                         <segue destination="tFT-9O-CMi" kind="relationship" relationship="viewControllers" id="Ig0-2v-sDE"/>
                     </connections>
@@ -611,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INY-uc-e7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485.507246376812" y="843.75"/>
+            <point key="canvasLocation" x="4395.652173913044" y="843.75"/>
         </scene>
         <!--Category-->
         <scene sceneID="xS7-gt-iSP">
@@ -736,7 +769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kew-Id-HSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4273.913043478261" y="843.75"/>
+            <point key="canvasLocation" x="5184.057971014493" y="843.75"/>
         </scene>
         <!--Basket-->
         <scene sceneID="pBi-aq-iXb">
@@ -1028,6 +1061,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85q-zm-tEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="2215.8482142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PO3-ar-C5H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1gO-dh-gpE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="X8f-Qx-Chs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S8V-5O-QTn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UFh-Zv-mfZ" kind="relationship" relationship="rootViewController" id="gci-gW-8XI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppi-8Z-AdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="807.58928571428567"/>
         </scene>
     </scenes>
     <resources>
