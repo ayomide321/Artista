@@ -52,9 +52,10 @@ class ProfileTableViewController: UITableViewController {
     //MARK: - Helpers
     
     private func checkOnboardingStatus() {
-        
+        //TODO: - FIX FUNCTION AFTER SWIPE
+        sellHistoryButtonOutlet.isEnabled = false
         if MUser.currentUser() != nil {
-            sellHistoryButtonOutlet.isEnabled = false
+            
             print("user")
             if MUser.currentUser()!.onBoard {
                 finishRegistrationButtonOutlet.setTitle("Account is Active", for: .normal)

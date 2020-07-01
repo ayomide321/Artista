@@ -130,7 +130,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         item.categoryID = category.id
         item.description = descriptionTextview.text
         item.price = Double(priceInCurrency/100)
-        
+        item.ownerID = MUser.currentID()
         //if there is atleast one image
         if itemImages.count > 0 {
             

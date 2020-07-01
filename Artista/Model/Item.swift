@@ -17,6 +17,7 @@ class Item {
     var description: String!
     var price: Double!
     var imageLinks: [String]!
+    var ownerID: String!
     
     
     init(){
@@ -29,6 +30,8 @@ class Item {
         description = _dictionary[kDESCRIPTION] as? String
         price = _dictionary[kPRICE] as? Double
         imageLinks = _dictionary[kIMAGELINKS] as? [String]
+        ownerID = _dictionary[kOWNERID] as? String
+        
     }
 }
 
@@ -42,7 +45,7 @@ func saveItemToFireStore(_ item: Item){
 
 func itemDictionaryFrom(_ item: Item) -> NSDictionary {
     
-    return NSDictionary(objects: [item.id, item.categoryID, item.name, item.description, item.price, item.imageLinks], forKeys: [kOBJECTID as NSCopying, kCATEGORYID  as NSCopying, kNAME  as NSCopying, kDESCRIPTION  as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying])
+    return NSDictionary(objects: [item.ownerID, item.id, item.categoryID, item.name, item.description, item.price, item.imageLinks], forKeys: [kOBJECTID as NSCopying, kCATEGORYID  as NSCopying, kNAME  as NSCopying, kDESCRIPTION  as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying, kOBJECTID as NSCopying])
     
 }
 
