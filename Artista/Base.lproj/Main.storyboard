@@ -722,6 +722,17 @@
                                     <action selector="doneButtonPressed:" destination="Iu8-DI-Bkh" eventType="touchUpInside" id="ere-F2-27m"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqp-Yf-WZZ">
+                                <rect key="frame" x="20" y="796" width="374" height="46"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Delete Listing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Iu8-DI-Bkh" eventType="touchUpInside" id="eHW-gO-omx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -732,6 +743,7 @@
                             <constraint firstItem="bOg-PQ-eLt" firstAttribute="top" secondItem="CI9-WX-H9x" secondAttribute="bottom" constant="8" id="G0h-kM-jx3"/>
                             <constraint firstItem="CDb-fU-o2R" firstAttribute="top" secondItem="YVm-Tv-JxY" secondAttribute="top" constant="20" id="GRw-x3-X7C"/>
                             <constraint firstItem="YVm-Tv-JxY" firstAttribute="trailing" secondItem="Zwu-Sm-HAT" secondAttribute="trailing" constant="24" id="GWa-GV-O85"/>
+                            <constraint firstItem="YVm-Tv-JxY" firstAttribute="trailing" secondItem="hqp-Yf-WZZ" secondAttribute="trailing" constant="20" id="Hqo-Vz-WJj"/>
                             <constraint firstItem="CI9-WX-H9x" firstAttribute="top" secondItem="YVm-Tv-JxY" secondAttribute="top" constant="66" id="J9X-Or-wXt"/>
                             <constraint firstItem="EnE-Gc-R8I" firstAttribute="top" secondItem="U70-be-FFJ" secondAttribute="bottom" constant="8" id="Me6-FP-DkV"/>
                             <constraint firstItem="CDb-fU-o2R" firstAttribute="centerX" secondItem="yhG-OR-TQQ" secondAttribute="centerX" id="OhU-jw-Xur"/>
@@ -739,6 +751,8 @@
                             <constraint firstItem="EnE-Gc-R8I" firstAttribute="leading" secondItem="YVm-Tv-JxY" secondAttribute="leading" constant="20" id="ScQ-SX-Pt3"/>
                             <constraint firstItem="bOg-PQ-eLt" firstAttribute="top" secondItem="CDb-fU-o2R" secondAttribute="bottom" constant="41" id="Y3Z-L2-ddX"/>
                             <constraint firstItem="CDb-fU-o2R" firstAttribute="leading" secondItem="YVm-Tv-JxY" secondAttribute="leading" constant="140" id="YSP-QU-lX9"/>
+                            <constraint firstItem="hqp-Yf-WZZ" firstAttribute="leading" secondItem="YVm-Tv-JxY" secondAttribute="leading" constant="20" id="b1V-N6-h1w"/>
+                            <constraint firstItem="YVm-Tv-JxY" firstAttribute="bottom" secondItem="hqp-Yf-WZZ" secondAttribute="bottom" constant="20" id="bYi-6Z-G6H"/>
                             <constraint firstItem="1Qf-Wh-C9t" firstAttribute="top" secondItem="EnE-Gc-R8I" secondAttribute="bottom" constant="8" id="cXD-A8-mXf"/>
                             <constraint firstItem="YVm-Tv-JxY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="EnE-Gc-R8I" secondAttribute="trailing" constant="299" id="cim-cv-f23"/>
                             <constraint firstItem="Zwu-Sm-HAT" firstAttribute="leading" secondItem="CDb-fU-o2R" secondAttribute="trailing" constant="79" id="d51-qh-Zkp"/>

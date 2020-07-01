@@ -54,7 +54,7 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
             //TODO: Add item to categories
         } else {
             
-            self.hud.textLabel.text = "All fields are required!"
+            self.hud.textLabel.text = "All fields are required and price must be atleast $1!"
             self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
             self.hud.show(in: self.view)
             self.hud.dismiss(afterDelay: 2.0)
@@ -76,7 +76,9 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
     
     private func fieldsAreCompleted() -> Bool {
         
-        return (titleTextField.text != "" && priceTextField.text != "" && descriptionTextview.text != "")
+        let firstVar: Bool = (titleTextField.text != "" && priceTextField.text != "" && descriptionTextview.text != "")
+        let secondVar: Bool = (priceInCurrency >= 100 && priceInCurrency <= 9999999)
+        return (firstVar && secondVar)
     }
     private func dismissKeyboard() {
         self.view.endEditing(false)

@@ -179,3 +179,5 @@ func updateCurrentItemInFirestore(_ item: Item, withValues: [String: Any], compl
     }
     
 }
+
+//MARK: - Delete Items Func

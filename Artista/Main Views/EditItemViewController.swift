@@ -37,7 +37,7 @@ class EditItemViewController: UIViewController, UITextFieldDelegate {
                         self.hud.dismiss(afterDelay: 2.0)                }
                 }
             } else {
-                self.hud.textLabel.text = "All fields must be completed!"
+                self.hud.textLabel.text = "All fields must be completed and item must be atleast $1!"
                 self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
                 self.hud.show(in: self.view)
                 self.hud.dismiss(afterDelay: 2.0)
@@ -45,6 +45,9 @@ class EditItemViewController: UIViewController, UITextFieldDelegate {
             }
     }
     
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        
+    }
     
     //MARK: - Variables
     
@@ -77,7 +80,9 @@ class EditItemViewController: UIViewController, UITextFieldDelegate {
     
     private func fieldsAreCompleted() -> Bool {
         
-        return (nameTextField.text != "" && priceTextField.text != "" && descriptionTextField.text != "")
+        let firstVar: Bool = (nameTextField.text != "" && priceTextField.text != "" && descriptionTextField.text != "")
+        let secondVar: Bool = (priceInCurrency >= 100 && priceInCurrency <= 9999999)
+        return (firstVar && secondVar)
     }
     private func dismissKeyboard() {
         self.view.endEditing(false)

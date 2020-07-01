@@ -73,18 +73,18 @@ func categoryDictionaryFrom(_ category: Category) -> NSDictionary {
 }
 
 //use only one time
-/*
+
 func createCategorySet() {
     
     let photography = Category(_name: "Photography", _imageName: "camera")
-    let sculpture = Category(_name: "Sculpting", _imageName: "statue")
+    let sculpture = Category(_name: "Sculpture", _imageName: "statue")
     let painting = Category(_name: "Painting", _imageName: "paintbrush")
     let drawing = Category(_name: "Drawing", _imageName: "pencil")
-    let ceramic = Category(_name: "Ceramic", _imageName: "ceramic")
-    let digital = Category(_name: "Digital", _imageName: "computer")
-    let film = Category(_name: "Film", _imageName: "video")
+    let etching = Category(_name: "Etching", _imageName: "ceramic")
+    let graphic_design = Category(_name: "Graphix Design", _imageName: "computer")
+    let vfx = Category(_name: "VFX", _imageName: "video")
     
-    let arrayOfCategories = [photography, sculpture, painting, drawing, ceramic, digital, film]
+    let arrayOfCategories = [photography, sculpture, painting, drawing, etching, graphic_design, vfx]
     
     for category in arrayOfCategories {
         saveCategoryToFirebase(category)
@@ -94,4 +94,4 @@ func createCategorySet() {
 }
     
 
-*/
+

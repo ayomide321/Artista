@@ -23,6 +23,9 @@ class CategoryCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //To create new categories
+        //createCategorySet()
     }
     
     override func viewDidAppear(_ animated: Bool) {

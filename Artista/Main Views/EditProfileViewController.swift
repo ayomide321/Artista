@@ -105,4 +105,11 @@ class EditProfileViewController: UIViewController {
         }
         
     }
+    
+    //MARK: - Delete Function
+    private func deleteItem() {
+        
+        
+        
+    }
 }
