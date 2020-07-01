@@ -11,7 +11,7 @@ import Gallery
 import JGProgressHUD
 import NVActivityIndicatorView
 
-class AddItemViewController: UIViewController {
+class AddItemViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: IBOutlets
     
@@ -23,7 +23,7 @@ class AddItemViewController: UIViewController {
     var category: Category!
     var gallery: GalleryController!
     let hud = JGProgressHUD(style: .dark)
-    
+    var priceInCurrency: Int = 0
     var activityIndicator: NVActivityIndicatorView?
     
     var itemImages: [UIImage?] = []
@@ -33,6 +33,9 @@ class AddItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        priceTextField.delegate = self
+        priceTextField.placeholder = updateAmount()
 
     }
         		
@@ -83,6 +86,39 @@ class AddItemViewController: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
     }
+    
+    private func updateAmount() -> String? {
+        
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = NumberFormatter.Style.currency
+        
+        let amount = Double(priceInCurrency/100) + Double(priceInCurrency%100)/100
+        
+        return formatter.string(from: NSNumber(value: amount))
+        
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let digit = Int(string) {
+            
+            priceInCurrency = priceInCurrency * 10 + digit
+            
+            priceTextField.text = updateAmount()
+        }
+        
+        if string == "" {
+            
+            priceInCurrency /= 10
+            
+            priceTextField.text = updateAmount()
+            
+        }
+        
+        return false
+    }
     //MARK: Save Item
     private func saveToFirebase() {
         
@@ -93,7 +129,7 @@ class AddItemViewController: UIViewController {
         item.name = titleTextField.text!
         item.categoryID = category.id
         item.description = descriptionTextview.text
-        item.price = Double(priceTextField.text!)
+        item.price = Double(priceInCurrency/100)
         
         //if there is atleast one image
         if itemImages.count > 0 {
@@ -146,9 +182,9 @@ class AddItemViewController: UIViewController {
         Config.Camera.imageLimit = 6
         
         self.present(self.gallery, animated: true, completion: nil)
-        
-        
     }
+    
+    
 }
 
 

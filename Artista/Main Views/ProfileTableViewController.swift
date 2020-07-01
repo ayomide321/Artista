@@ -15,6 +15,7 @@ class ProfileTableViewController: UITableViewController {
     
     @IBOutlet weak var finishRegistrationButtonOutlet: UIButton!
     @IBOutlet weak var purchaseHistoryButtonOutlet: UIButton!
+    @IBOutlet weak var sellHistoryButtonOutlet: UIButton!
     
     //MARK: - Vars
     var editBarButtonOutlet: UIBarButtonItem!
@@ -38,7 +39,7 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 3
+        return 4
     }
     
     //MARK: - Table view delegate
@@ -53,6 +54,7 @@ class ProfileTableViewController: UITableViewController {
     private func checkOnboardingStatus() {
         
         if MUser.currentUser() != nil {
+            sellHistoryButtonOutlet.isEnabled = false
             print("user")
             if MUser.currentUser()!.onBoard {
                 finishRegistrationButtonOutlet.setTitle("Account is Active", for: .normal)
