@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import EmptyDataSet_Swift
 
 class SearchViewController: UIViewController {
     
@@ -46,6 +47,9 @@ class SearchViewController: UIViewController {
         super.viewDidAppear(animated)
         
         activityIndicator = NVActivityIndicatorView (frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .ballPulse, color: #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1), padding: nil)
+        
+        tableView.emptyDataSetDelegate = self
+        tableView.emptyDataSetSource = self
     }
     
     
@@ -192,6 +196,40 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         showItemView(withItem: searchResults[indexPath.row])
         
         
+    }
+    
+}
+
+extension SearchViewController: EmptyDataSetSource, EmptyDataSetDelegate {
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        
+        return NSAttributedString(string: "No items to display!")
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        
+        return UIImage(named: "emptyData")
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        
+        return NSAttributedString(string: "Please try a different search term")
+    }
+    
+    func buttonImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage? {
+        
+        return UIImage(named: "search")
+    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> NSAttributedString? {
+        
+        return NSAttributedString(string: "Start searching...")
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView, didTapButton button: UIButton) {
+        
+        showSearchField()
     }
     
 }
