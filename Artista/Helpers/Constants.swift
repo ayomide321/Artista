@@ -30,6 +30,7 @@ public let kCATEGORYID = "categoryID"
 public let kDESCRIPTION = "description"
 public let kPRICE = "price"
 public let kIMAGELINKS = "imageLinks"
+public let kITEMVIEWS = "itemViews"
 
 //Basket
 public let kOWNERID = "ownerID"
