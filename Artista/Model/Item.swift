@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import InstantSearchClient
 
 class Item {
     var id: String!
@@ -103,9 +104,52 @@ func downloadItems(_ withIDs: [String], completion: @escaping (_ itemArray: [Ite
     } else {
         completion(itemArray)
     }
-    
-    
-    
-    
 }
 
+//MARK: - Algolia Functions
+
+func saveItemToAlgolia(item: Item) {
+    
+    let index = AlgoliaService.shared.index
+    
+    let itemToSave = itemDictionaryFrom(item) as! [String: Any]
+    
+    index.addObject(itemToSave, withID: item.id, requestOptions: nil) { (content, error) in
+        
+        if error != nil {
+            print("Error: Unable to save to Algolia", error!.localizedDescription)
+        } else {
+            print("added to Algolia")
+            
+        }
+    }
+}
+
+func searchAlgolia(searchString: String, completion: @escaping (_ itemArray: [String]) -> Void) {
+    
+    let index = AlgoliaService.shared.index
+    var resultIDs: [String] = []
+    
+    let query = Query(query: searchString)
+    
+    query.attributesToRetrieve = ["name", "description"]
+    
+    index.search(query) { (content, error) in
+        
+        
+        if error == nil {
+            let cont = content!["hits"] as! [[String: Any]]
+            
+            resultIDs = []
+            
+            for result in cont {
+                resultIDs.append(result["objectID"] as! String)
+            }
+            
+            completion(resultIDs)
+        } else {
+            print("Error: Algolia Seard - ", error!.localizedDescription)
+            completion(resultIDs)
+        }
+    }
+}
