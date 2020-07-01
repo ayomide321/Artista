@@ -124,19 +124,44 @@ class SearchViewController: UIViewController {
         }
         
     }
+    
+    private func showItemView(withItem: Item) {
+        
+        let itemVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemView") as! ItemViewController
+        
+        itemVC.item = withItem
+        
+        self.navigationController?.pushViewController(itemVC, animated: true)
+    }
+    
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        
+        return searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        
+        cell.generateCell(searchResults[indexPath.row])
+        
+        return cell
     }
     
+    //MARK: - UITableView Delegate
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        showItemView(withItem: searchResults[indexPath.row])
+        
+        
+    }
     
 }
