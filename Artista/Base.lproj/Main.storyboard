@@ -22,15 +22,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-9t-puA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-AC-agG">
-                                                <rect key="frame" x="8" y="11" width="398" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-AC-agG">
+                                                <rect key="frame" x="8" y="4" width="398" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-pn-qVj">
-                                                <rect key="frame" x="8" y="53" width="398" height="39"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-pn-qVj">
+                                                <rect key="frame" x="8" y="46" width="398" height="46"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <state key="normal" title="Search">
@@ -43,7 +41,17 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JvV-pn-qVj" secondAttribute="trailing" constant="8" id="52C-cR-vg3"/>
+                                            <constraint firstItem="JvV-pn-qVj" firstAttribute="leading" secondItem="6W5-9t-puA" secondAttribute="leading" constant="8" id="8NI-dz-n1O"/>
                                             <constraint firstAttribute="height" constant="100" id="D6o-zV-hVO"/>
+                                            <constraint firstItem="rdJ-AC-agG" firstAttribute="leading" secondItem="6W5-9t-puA" secondAttribute="leading" constant="8" id="NeI-W5-gmM"/>
+                                            <constraint firstAttribute="trailing" secondItem="JvV-pn-qVj" secondAttribute="trailing" constant="8" id="RqP-Fq-WdT"/>
+                                            <constraint firstItem="JvV-pn-qVj" firstAttribute="top" secondItem="rdJ-AC-agG" secondAttribute="bottom" constant="8" id="T2P-hh-lb2"/>
+                                            <constraint firstAttribute="trailing" secondItem="rdJ-AC-agG" secondAttribute="trailing" constant="8" id="cuz-oU-dcr"/>
+                                            <constraint firstItem="rdJ-AC-agG" firstAttribute="top" secondItem="6W5-9t-puA" secondAttribute="top" constant="4" id="ld3-l9-lXO"/>
+                                            <constraint firstAttribute="bottom" secondItem="JvV-pn-qVj" secondAttribute="bottom" constant="8" id="wv4-en-1LJ"/>
+                                            <constraint firstItem="JvV-pn-qVj" firstAttribute="top" secondItem="rdJ-AC-agG" secondAttribute="bottom" constant="8" id="xEb-dv-Ubt"/>
+                                            <constraint firstItem="JvV-pn-qVj" firstAttribute="leading" secondItem="6W5-9t-puA" secondAttribute="leading" constant="8" id="zJ0-s7-OSC"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-74-llB">
@@ -118,8 +126,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6W5-9t-puA" firstAttribute="top" secondItem="Cnv-hx-qEt" secondAttribute="top" id="5fN-Tq-TAC"/>
+                                    <constraint firstItem="6W5-9t-puA" firstAttribute="leading" secondItem="Cnv-hx-qEt" secondAttribute="leading" id="bp8-tN-lzZ"/>
                                     <constraint firstAttribute="trailing" secondItem="6W5-9t-puA" secondAttribute="trailing" id="dfw-gw-8DE"/>
                                     <constraint firstItem="6W5-9t-puA" firstAttribute="leading" secondItem="Cnv-hx-qEt" secondAttribute="leading" id="ou7-FC-ojr"/>
+                                    <constraint firstAttribute="trailing" secondItem="6W5-9t-puA" secondAttribute="trailing" id="tkL-Gj-O4W"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -145,7 +155,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchButtonOutlet" destination="6W5-9t-puA" id="Vlc-dI-eq7"/>
+                        <outlet property="searchButtonOutlet" destination="JvV-pn-qVj" id="jzh-q8-0vx"/>
                         <outlet property="searchOptionView" destination="6W5-9t-puA" id="dSm-MH-kXT"/>
                         <outlet property="searchTextField" destination="rdJ-AC-agG" id="6fn-En-Ram"/>
                         <outlet property="tableView" destination="0jY-74-llB" id="TYW-ak-lsP"/>

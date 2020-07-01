@@ -20,7 +20,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
-    @IBOutlet weak var searchButtonOutlet: UIView!
+    @IBOutlet weak var searchButtonOutlet: UIButton!
+    
     
     
     //MARK: - Vars
@@ -59,6 +60,35 @@ class SearchViewController: UIViewController {
         
     }
     @IBAction func searchButtonPressed(_ sender: Any) {
+        
+        if searchTextField.text != "" {
+            
+            //search
+            searchInFirebase(forName: searchTextField.text!)
+            emptyTextField()
+            animateSearchOptionsIn()
+            dismissKeyboard()
+        }
+    }
+    
+    //MARK: - Search database
+    
+    private func searchInFirebase(forName: String) {
+        
+        showLoadingIndicator()
+        
+        searchAlgolia(searchString: forName) { (itemIDs) in
+            
+            downloadItems(itemIDs) { (allItems) in
+                
+                self.searchResults = allItems
+                self.tableView.reloadData()
+                self.hideLoadingIndicator()
+            }
+            
+        }
+        
+        
     }
     
     
@@ -75,10 +105,10 @@ class SearchViewController: UIViewController {
     @objc func textFieldDidChange (_ textField: UITextField) {
         
         print("typing")
-        searchButtonOutlet.isUserInteractionEnabled = textField.text != ""
+        searchButtonOutlet.isEnabled = textField.text != ""
         
-        if searchButtonOutlet.isUserInteractionEnabled {
-            searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        if searchButtonOutlet.isEnabled {
+            searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
         } else {
             disableSearchButton()
             
@@ -86,7 +116,7 @@ class SearchViewController: UIViewController {
     }
     
     private func disableSearchButton() {
-        searchButtonOutlet.isUserInteractionEnabled = false
+        searchButtonOutlet.isEnabled = false
         searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         
     }
