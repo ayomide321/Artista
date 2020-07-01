@@ -38,6 +38,7 @@
 		C672483024A5AF5F0042DD35 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */; };
 		C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */; };
 		C690080824AACAFF00ED8817 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080724AACAFF00ED8817 /* EditProfileViewController.swift */; };
+		C690080A24AC2D6000ED8817 /* AlgoliaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080924AC2D6000ED8817 /* AlgoliaService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		C672482F24A5AF5F0042DD35 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		C690080724AACAFF00ED8817 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		C690080924AC2D6000ED8817 /* AlgoliaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaService.swift; sourceTree = "<group>"; };
 		D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.debug.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +192,7 @@
 				4E12BC6224A849450071DBA2 /* MUser.swift */,
 				C672482124902D110042DD35 /* Item.swift */,
 				C6139C4E24A83E6000A0E193 /* Basket.swift */,
+				C690080924AC2D6000ED8817 /* AlgoliaService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				C67248162490099F0042DD35 /* FirebaseCollectionReference.swift in Sources */,
 				C6724814249008640042DD35 /* CategoryCollectionViewController.swift in Sources */,
 				C6139C4F24A83E6000A0E193 /* Basket.swift in Sources */,
+				C690080A24AC2D6000ED8817 /* AlgoliaService.swift in Sources */,
 				C672480A248FFE630042DD35 /* ViewController.swift in Sources */,
 				4E412C5524AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift in Sources */,
 				4E26C1E924ABDC24004606E4 /* SearchViewController.swift in Sources */,

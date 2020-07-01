@@ -10,7 +10,9 @@ import Foundation
 
 //IDS and Keys
 public let kFILEREFERENCE = "https://console.firebase.google.com/project/artista-3de60/storage/artista-3de60.appspot.com/files"
-
+public let kALGOLIA_APP_ID = "R3DMV4XEKA"
+public let kALGOLIA_SEARCH_KEY = "95ecc527dfda009eb9b4dba3c28e27e0"
+public let kALGOLIA_ADMIN_KEY = "ff3813e19b077bafe3809a73e7f56009"
 
 //Firebase Headers
 public let kUSER_PATH = "User"
