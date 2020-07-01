@@ -39,7 +39,7 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 4
+        return 5
     }
     
     //MARK: - Table view delegate
