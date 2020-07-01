@@ -29,7 +29,12 @@ class CategoryCollectionViewController: UICollectionViewController {
         super.viewDidAppear(animated)
         
         loadCategories()
-    }
+        
+        if MUser.currentUser() == nil {
+                showLoginView()
+        } else {
+            print("User is logged in")
+        }    }
 
 
     // MARK: UICollectionViewDataSource
@@ -78,7 +83,14 @@ class CategoryCollectionViewController: UICollectionViewController {
         
         
     }
-
+    
+    //MARK: - Show Login view
+    private func showLoginView() {
+        
+        let loginView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "loginView")
+        
+        self.present(loginView, animated: true, completion: nil)
+    }
 }
 
 extension CategoryCollectionViewController: UICollectionViewDelegateFlowLayout {
