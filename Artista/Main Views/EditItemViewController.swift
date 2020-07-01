@@ -46,7 +46,7 @@ class EditItemViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Variables
