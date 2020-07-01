@@ -39,6 +39,8 @@
 		C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */; };
 		C690080824AACAFF00ED8817 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080724AACAFF00ED8817 /* EditProfileViewController.swift */; };
 		C690080A24AC2D6000ED8817 /* AlgoliaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080924AC2D6000ED8817 /* AlgoliaService.swift */; };
+		C6F3DE1124AD0E4600DA3A99 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */; };
+		C6F3DE1324AD1F2E00DA3A99 /* SellHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		C690080724AACAFF00ED8817 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C690080924AC2D6000ED8817 /* AlgoliaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaService.swift; sourceTree = "<group>"; };
+		C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellHistoryTableViewController.swift; sourceTree = "<group>"; };
 		D575B176CAFDB14A0A4D17FF /* Pods-Artista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artista.debug.xcconfig"; path = "Target Support Files/Pods-Artista/Pods-Artista.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +174,9 @@
 				C690080624AA8C1800ED8817 /* Login View */,
 				C6139C5224AA5A0500A0E193 /* ProfileTableViewController.swift */,
 				C690080724AACAFF00ED8817 /* EditProfileViewController.swift */,
+				C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */,
 				4E412C5424AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift */,
+				C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -334,9 +340,11 @@
 				4E26C1E924ABDC24004606E4 /* SearchViewController.swift in Sources */,
 				C672482624A004A80042DD35 /* Richability.swift in Sources */,
 				C690080824AACAFF00ED8817 /* EditProfileViewController.swift in Sources */,
+				C6F3DE1324AD1F2E00DA3A99 /* SellHistoryTableViewController.swift in Sources */,
 				C672482C24A3103E0042DD35 /* HelperFunctions.swift in Sources */,
 				C6139C5124A9045B00A0E193 /* BasketViewController.swift in Sources */,
 				C672480E249007A40042DD35 /* CategoryCollectionViewCell.swift in Sources */,
+				C6F3DE1124AD0E4600DA3A99 /* EditItemViewController.swift in Sources */,
 				C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */,
 				4E12BC6124A70A8F0071DBA2 /* WelcomeViewController.swift in Sources */,
 				C67247EE24857F3E0042DD35 /* AppDelegate.swift in Sources */,

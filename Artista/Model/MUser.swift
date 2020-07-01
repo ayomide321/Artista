@@ -16,7 +16,7 @@ class MUser {
     var lastName: String
     var fullName: String
     var purchasedItemIds: [String]
-    
+    var soldItemIds: [String]
     var fullAddress: String?
     var onBoard: Bool
     
@@ -32,6 +32,7 @@ class MUser {
         fullAddress = ""
         onBoard = false
         purchasedItemIds = []
+        soldItemIds = []
         
     }
     
@@ -74,7 +75,12 @@ class MUser {
        } else {
          purchasedItemIds = []
        }
-   
+        
+        if let soldIds = _dictionary[kSOLDITEMIDS] {
+            soldItemIds = soldIds as! [String]
+        } else {
+          soldItemIds = []
+        }
     }
     
     

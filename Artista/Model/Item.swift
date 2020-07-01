@@ -34,6 +34,13 @@ class Item {
         ownerID = _dictionary[kOWNERID] as? String
         
     }
+    
+    class func currentItem() -> Item! {
+        if let dictionary = UserDefaults.standard.object(forKey: kOBJECTID) {
+            return Item.init(_dictionary: dictionary as! NSDictionary)
+        }
+        return nil
+    }
 }
 
 //Mark: Save items func
@@ -46,9 +53,12 @@ func saveItemToFireStore(_ item: Item){
 
 func itemDictionaryFrom(_ item: Item) -> NSDictionary {
     
-    return NSDictionary(objects: [item.ownerID, item.views, item.id, item.categoryID, item.name, item.description, item.price, item.imageLinks], forKeys: [kOBJECTID as NSCopying, kCATEGORYID  as NSCopying, kNAME  as NSCopying, kDESCRIPTION  as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying, kOBJECTID as NSCopying, kITEMVIEWS as NSCopying])
+    return NSDictionary(objects: [item.id, item.categoryID, item.name, item.description, item.price, item.imageLinks, item.ownerID], forKeys: [kOBJECTID as NSCopying, kCATEGORYID  as NSCopying, kNAME  as NSCopying, kDESCRIPTION  as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying, kOWNERID as NSCopying])
     
 }
+
+//MARK: - Return Current Item
+
 
 //MARK: Download Func
 func downloadItemsFromFirebase(_ withCategoryId: String, completion: @escaping (_ itemArray: [Item]) -> Void) {
@@ -156,4 +166,16 @@ func searchAlgolia(searchString: String, completion: @escaping (_ itemArray: [St
             completion(resultIDs)
         }
     }
+}
+
+//MARK: - Update Items Func
+
+func updateCurrentItemInFirestore(_ item: Item, withValues: [String: Any], completion: @escaping (_ error: Error?) -> Void) {
+    
+    
+    FirebaseReference(.Items).document(item.id).updateData(withValues) { (error) in
+        
+        completion(error)
+    }
+    
 }

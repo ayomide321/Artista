@@ -19,6 +19,13 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var editButton: UIButton!
+    
+    //MARK: - IBActions
+    
+    @IBAction func editButtonPressed(_ sender: Any) {
+        showEditView(withItem: item)
+    }
     
     
     //MARK: - Variables
@@ -39,7 +46,17 @@ class ItemViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.backAction))]
         
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "addToBasket"), style: .plain, target: self, action: #selector(self.addToBasketButtonPressed))]    }
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "addToBasket"), style: .plain, target: self, action: #selector(self.addToBasketButtonPressed))]
+        
+        if MUser.currentID() == item.ownerID {
+            editButton.isHidden = false
+            editButton.isEnabled = true
+        } else {
+            editButton.isHidden = true
+            editButton.isEnabled = false
+        }
+        
+    }
     
     //MARK: - Download Pictures
     
@@ -101,7 +118,14 @@ class ItemViewController: UIViewController {
         }
     }
     
-    //MARK: - Add to basket
+    //MARK: - Navigation
+    private func showEditView(withItem: Item) {
+        
+        let itemVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "editView") as! EditItemViewController
+        itemVC.item = withItem
+        self.navigationController?.pushViewController(itemVC, animated: true)
+        
+    }    //MARK: - Add to basket
     
     private func createNewBasket() {
         
