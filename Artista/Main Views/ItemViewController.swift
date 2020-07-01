@@ -48,9 +48,11 @@ class ItemViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "addToBasket"), style: .plain, target: self, action: #selector(self.addToBasketButtonPressed))]
         
-        if MUser.currentID() == item.ownerID {
-            editButton.isHidden = false
-            editButton.isEnabled = true
+        if MUser.currentUser() != nil{
+            if MUser.currentID() == item.ownerID{
+                editButton.isHidden = false
+                editButton.isEnabled = true
+            }
         } else {
             editButton.isHidden = true
             editButton.isEnabled = false

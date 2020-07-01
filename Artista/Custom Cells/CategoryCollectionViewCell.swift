@@ -16,6 +16,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         
         nameLabel.text = category.name
         imageView.image = category.image
+        
     }
     
 }
