@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class SearchViewController: UIViewController {
     
@@ -22,19 +23,40 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButtonOutlet: UIView!
     
     
+    //MARK: - Vars
+    var searchResults: [Item] = []
+    
+    var activityIndicator: NVActivityIndicatorView?
+    
+    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
         
         
         searchTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        activityIndicator = NVActivityIndicatorView (frame: CGRect(x: self.view.frame.width / 2 - 30, y: self.view.frame.height / 2 - 30, width: 60, height: 60), type: .ballPulse, color: #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1), padding: nil)
+    }
+    
+    
+    
     //MARK: IBActions
     
     @IBAction func showSearchBarButton(_ sender: Any) {
+        
+        dismissKeyboard()
+        showSearchField()
+        
+        
     }
     @IBAction func searchButtonPressed(_ sender: Any) {
     }
@@ -56,7 +78,7 @@ class SearchViewController: UIViewController {
         searchButtonOutlet.isUserInteractionEnabled = textField.text != ""
         
         if searchButtonOutlet.isUserInteractionEnabled {
-            searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+            searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else {
             disableSearchButton()
             
@@ -66,9 +88,42 @@ class SearchViewController: UIViewController {
     private func disableSearchButton() {
         searchButtonOutlet.isUserInteractionEnabled = false
         searchButtonOutlet.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        
+    }
+        
+    private func showSearchField() {
+        disableSearchButton()
+        emptyTextField()
+        animateSearchOptionsIn()
+        
+    }
+    //MARK: - Animations
+    
+    private func animateSearchOptionsIn() {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.searchOptionView.isHidden = !self.searchOptionView.isHidden
+        }
     }
     
+    //MARK: - Activity Indicator
     
+    private func showLoadingIndicator() {
+        if activityIndicator != nil {
+            self.view.addSubview(activityIndicator!)
+            activityIndicator!.startAnimating()
+            
+        }
+        
+    }
+    
+    private func hideLoadingIndicator() {
+        if activityIndicator != nil {
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
+        }
+        
+    }
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
