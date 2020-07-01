@@ -10,7 +10,11 @@ import UIKit
 import EmptyDataSet_Swift
 
 class ItemsTableViewController: UITableViewController {
-
+    
+    //MARK: - IBOutlets
+    
+    @IBOutlet weak var addItemOutlet: UIBarButtonItem!
+    
     //Mark: Variables
     var category: Category?
     
@@ -31,6 +35,12 @@ class ItemsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if MUser.currentUser() == nil {
+            addItemOutlet.isEnabled = false
+        } else {
+            addItemOutlet.isEnabled = true
+        }
         
         if category != nil {
             loadItems()
