@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Constants {
+    static let publishableKey = "pk_test_51H0TDHKPHatNcVg1oOPg2UAIkYufXjFq4UUmAjmXMQYU04vqnvbdSQjaJaoosu1OpJGQHr8IkTmztP18D1tT0Uhg00jnfKx8zk"
+    static let baseURLString = "http://localhost:3000/"
+    static let defaultCurrency = "usd"
+    static let defaultDescription = "Purchase from Market"
+    
+}
 //IDS and Keys
 public let kFILEREFERENCE = "https://console.firebase.google.com/project/artista-3de60/storage/artista-3de60.appspot.com/files"
 public let kALGOLIA_APP_ID = "R3DMV4XEKA"
