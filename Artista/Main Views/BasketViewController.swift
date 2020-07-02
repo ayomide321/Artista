@@ -8,7 +8,7 @@
 
 import UIKit
 import JGProgressHUD
-
+import Stripe
 class BasketViewController: UIViewController {
 
     //MARK: - IBOutlets
@@ -24,7 +24,7 @@ class BasketViewController: UIViewController {
     var purchasedItemIDs : [String] = []
     
     let hud = JGProgressHUD(style: .dark)
-    
+    var totalPriceBeforeFee = 0
     //MARK: - View Lifecycle
      
     override func viewDidLoad() {
@@ -56,14 +56,12 @@ class BasketViewController: UIViewController {
             
             addItemstoPurchaseHistory(self.purchasedItemIDs)
             emptyTheBasket()
+            finishPayment(token: <#T##STPToken#>)
             
         
         } else {
             
-            self.hud.textLabel.text = "please complete your profile!"
-            self.hud.indicatorView = JGProgressHUDIndicatorView()
-            self.hud.show(in: self.view)
-            self.hud.dismiss(afterDelay: 2.0)
+            self.showNotification(text: "Please complete your profile", isError: true)
             
         }
         
@@ -158,6 +156,24 @@ class BasketViewController: UIViewController {
         }
     }
     
+    private func applyFee(_cost: Double) -> Double {
+        var additionCost: Double = 0
+        var finalFee: Double = 0
+        if _cost <= 5000 {
+            return (_cost * 1.16)
+        }
+        if _cost > 5000 && _cost <= 20000 {
+            additionCost = _cost - 5000
+            finalFee = additionCost * 1.14 + (5000 * 1.16)
+        }
+        if _cost > 20000 {
+            additionCost = _cost - 20000
+            
+        }
+        
+        return finalFee
+    }
+    
     //MARK: - Navigation
     
     private func showItemView(withItem: Item) {
@@ -197,6 +213,40 @@ class BasketViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    //PAYPAL
+    private func finishPayment(token: STPToken) {
+        self.totalPriceBeforeFee = 0
+        
+        for item in allItems {
+            purchasedItemIDs.append(item.id)
+            self.totalPriceBeforeFee += Int(item.price)
+        }
+        
+        self.totalPriceBeforeFee = self.totalPriceBeforeFee * 100
+        
+        StripeClient.sharedClient.createAndConfirmPayment(token, amount: totalPriceBeforeFee) { (error) in
+            if error == nil {
+                self.emptyTheBasket()
+                self.addItemstoPurchaseHistory(self.purchasedItemIDs)
+                self.showNotification(text: "Payment successful", isError: false)
+            } else {
+                print("Error: ", error!.localizedDescription)
+            }
+        }
+    }
+    
+    private func showNotification(text: String, isError: Bool) {
+        if isError{
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+        } else {
+            self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        }
+        
+        self.hud.textLabel.text = text
+        self.hud.show(in: self.view)
+        self.hud.dismiss(afterDelay: 2.0)
     }
     
 }
