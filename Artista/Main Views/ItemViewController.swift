@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MessageKit
 import JGProgressHUD
 
 
@@ -174,6 +174,19 @@ class ItemViewController: UIViewController {
         
         self.present(loginView, animated: true, completion: nil)
     }
+    
+    //MARK: - New Conversation
+    
+    @IBAction func NewConvo(_ sender: Any) {
+        let vc = NewConversationViewController()
+        vc.title = "Lebron James"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    
+    
 
 
 }

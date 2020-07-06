@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEK-FN-Fvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.1159420289857" y="807.58928571428567"/>
+            <point key="canvasLocation" x="2578.2608695652175" y="807.58928571428567"/>
         </scene>
         <!--Basket-->
         <scene sceneID="EAe-uO-KSw">
@@ -395,11 +395,12 @@
                         <segue destination="1gO-dh-gpE" kind="relationship" relationship="viewControllers" id="s1B-Kn-SCe"/>
                         <segue destination="yxM-MK-jHu" kind="relationship" relationship="viewControllers" id="Lmg-kK-mJM"/>
                         <segue destination="tFT-9O-CMi" kind="relationship" relationship="viewControllers" id="Ig0-2v-sDE"/>
+                        <segue destination="Wek-KC-rd3" kind="relationship" relationship="viewControllers" id="rYe-YS-j54"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a5-xT-hvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="779"/>
+            <point key="canvasLocation" x="600" y="778.79464285714278"/>
         </scene>
         <!--Category-->
         <scene sceneID="bpN-4J-BF6">
@@ -859,8 +860,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-bS-4Sr">
-                                <rect key="frame" x="20" y="366" width="374" height="496"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-bS-4Sr">
+                                <rect key="frame" x="20" y="366" width="374" height="389"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -872,6 +873,18 @@
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="editButtonPressed:" destination="uD4-8y-edU" eventType="touchUpInside" id="3wF-yh-OCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-A5-td7">
+                                <rect key="frame" x="20" y="777" width="374" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start Conversation with Seller">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="NewConvo:" destination="uD4-8y-edU" eventType="touchUpInside" id="bkx-MF-Bx9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -914,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INY-uc-e7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4395.652173913044" y="843.75"/>
+            <point key="canvasLocation" x="5305.7971014492759" y="843.75"/>
         </scene>
         <!--Category-->
         <scene sceneID="xS7-gt-iSP">
@@ -1059,7 +1072,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kew-Id-HSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184.057971014493" y="843.75"/>
+            <point key="canvasLocation" x="6094.202898550725" y="843.75"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="KUQ-Ts-e56">
+            <objects>
+                <viewController id="Vl4-T3-QSw" customClass="ConversationsViewController" customModule="Artista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6u-Qr-PAg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="B3F-5m-oOw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="b9v-dh-kJG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2a-V2-NTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1888" y="785"/>
         </scene>
         <!--Basket-->
         <scene sceneID="pBi-aq-iXb">
@@ -1267,7 +1296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRM-SB-RkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740.5797101449277" y="2915.625"/>
+            <point key="canvasLocation" x="1774" y="2949"/>
         </scene>
         <!--Finish Registration View Controller-->
         <scene sceneID="KGs-2W-GZW">
@@ -1301,12 +1330,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xog-bO-bsq">
-                                <rect key="frame" x="18" y="103.66666666666667" width="378" height="34.000000000000014"/>
+                                <rect key="frame" x="18" y="104" width="378" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-Sg-Tb2">
-                                <rect key="frame" x="16" y="193.66666666666666" width="382" height="30"/>
+                                <rect key="frame" x="16" y="194" width="382" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -1317,7 +1346,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-93-JGI">
-                                <rect key="frame" x="18" y="145.66666666666666" width="378" height="34"/>
+                                <rect key="frame" x="18" y="146" width="378" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1478,13 +1507,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppi-8Z-AdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="807.58928571428567"/>
+            <point key="canvasLocation" x="1702.8985507246377" y="807.58928571428567"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="veV-ak-JUy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wek-KC-rd3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="message" catalog="system" id="uv6-Q3-WHu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="c1N-gV-POo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vl4-T3-QSw" kind="relationship" relationship="rootViewController" id="Ufv-uJ-1VT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jD1-AQ-2XF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175.3623188405797" y="785.49107142857144"/>
         </scene>
     </scenes>
     <resources>
         <image name="basket" width="30" height="30"/>
         <image name="homeIcon" width="30" height="30"/>
         <image name="imagePlaceholder" width="150" height="113.5"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="paintbrush" catalog="system" width="128" height="128"/>
         <image name="profile" width="30" height="30"/>
     </resources>

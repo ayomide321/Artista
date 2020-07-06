@@ -10,6 +10,7 @@ import UIKit
 import Gallery
 import JGProgressHUD
 import NVActivityIndicatorView
+import MessageKit
 
 class AddItemViewController: UIViewController, UITextFieldDelegate {
 
@@ -62,6 +63,10 @@ class AddItemViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func NewConvo(_ sender: Any) {
+        
+        
+    }
     @IBAction func cameraButtonPressed(_ sender: Any) {
         
         itemImages = []
