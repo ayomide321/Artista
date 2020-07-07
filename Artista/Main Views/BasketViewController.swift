@@ -53,10 +53,9 @@ class BasketViewController: UIViewController {
         if MUser.currentUser()!.onBoard {
             
             tempFunction()
-            
+            showPaymentOptions()
             addItemstoPurchaseHistory(self.purchasedItemIDs)
             emptyTheBasket()
-            finishPayment(token: <#T##STPToken#>)
             
         
         } else {
@@ -249,6 +248,22 @@ class BasketViewController: UIViewController {
         self.hud.dismiss(afterDelay: 2.0)
     }
     
+    private func showPaymentOptions() {
+        
+        let alertController = UIAlertController(title: "Payment Options", message: "Choose prefered payment option", preferredStyle: .actionSheet)
+        
+        let cardAction = UIAlertAction(title: "Pay with card", style: .default) { (action) in
+            
+            //Show card number view
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cardAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 
