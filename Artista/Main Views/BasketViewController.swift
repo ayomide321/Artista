@@ -55,7 +55,6 @@ class BasketViewController: UIViewController {
             tempFunction()
             showPaymentOptions()
             addItemstoPurchaseHistory(self.purchasedItemIDs)
-            emptyTheBasket()
             
         
         } else {
@@ -178,6 +177,7 @@ class BasketViewController: UIViewController {
     private func showItemView(withItem: Item) {
         
         let itemVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "itemView") as! ItemViewController
+        
         itemVC.item = withItem
         self.navigationController?.pushViewController(itemVC, animated: true)
         
@@ -231,6 +231,7 @@ class BasketViewController: UIViewController {
                 self.addItemstoPurchaseHistory(self.purchasedItemIDs)
                 self.showNotification(text: "Payment successful", isError: false)
             } else {
+                self.showNotification(text: error!.localizedDescription, isError: true)
                 print("Error: ", error!.localizedDescription)
             }
         }
@@ -242,7 +243,6 @@ class BasketViewController: UIViewController {
         } else {
             self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
         }
-        
         self.hud.textLabel.text = text
         self.hud.show(in: self.view)
         self.hud.dismiss(afterDelay: 2.0)
@@ -254,7 +254,10 @@ class BasketViewController: UIViewController {
         
         let cardAction = UIAlertAction(title: "Pay with card", style: .default) { (action) in
             
-            //Show card number view
+            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "cardInfoVC") as! CardInfoViewController
+            
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -316,4 +319,16 @@ extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+}
+
+
+extension BasketViewController: CardInfoViewControllerDelegate {
+    
+    func didClickDone(_ token: STPToken) {
+        finishPayment(token: token)
+    }
+    
+    func didClickCancel() {
+        showNotification(text: "Payment Canceled", isError: true)
+    }
 }

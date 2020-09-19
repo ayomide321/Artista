@@ -39,6 +39,7 @@
 		C690080524AA8BEC00ED8817 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */; };
 		C690080824AACAFF00ED8817 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080724AACAFF00ED8817 /* EditProfileViewController.swift */; };
 		C690080A24AC2D6000ED8817 /* AlgoliaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690080924AC2D6000ED8817 /* AlgoliaService.swift */; };
+		C6B6652625158666008A9AD3 /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B6652525158666008A9AD3 /* CardInfoViewController.swift */; };
 		C6F3DE1124AD0E4600DA3A99 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */; };
 		C6F3DE1324AD1F2E00DA3A99 /* SellHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */; };
 		C6F3DE1724AE3B8E00DA3A99 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3DE1624AE3B8E00DA3A99 /* StripeClient.swift */; };
@@ -80,6 +81,7 @@
 		C690080424AA8BEC00ED8817 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		C690080724AACAFF00ED8817 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		C690080924AC2D6000ED8817 /* AlgoliaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaService.swift; sourceTree = "<group>"; };
+		C6B6652525158666008A9AD3 /* CardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
 		C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellHistoryTableViewController.swift; sourceTree = "<group>"; };
 		C6F3DE1624AE3B8E00DA3A99 /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				C690080724AACAFF00ED8817 /* EditProfileViewController.swift */,
 				C6F3DE1024AD0E4600DA3A99 /* EditItemViewController.swift */,
 				4E412C5424AAEE0100B9EF3E /* PurchasedHistoryTableViewController.swift */,
+				C6B6652525158666008A9AD3 /* CardInfoViewController.swift */,
 				C6F3DE1224AD1F2E00DA3A99 /* SellHistoryTableViewController.swift */,
 			);
 			path = "Main Views";
@@ -335,6 +338,7 @@
 				C672482224902D110042DD35 /* Item.swift in Sources */,
 				C672482E24A314340042DD35 /* ItemViewController.swift in Sources */,
 				C67248162490099F0042DD35 /* FirebaseCollectionReference.swift in Sources */,
+				C6B6652625158666008A9AD3 /* CardInfoViewController.swift in Sources */,
 				C6724814249008640042DD35 /* CategoryCollectionViewController.swift in Sources */,
 				C6139C4F24A83E6000A0E193 /* Basket.swift in Sources */,
 				C690080A24AC2D6000ED8817 /* AlgoliaService.swift in Sources */,

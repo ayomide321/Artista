@@ -31,20 +31,26 @@ class StripeClient {
         let url = self.baseURL.appendingPathComponent("charge")
         
         let params: [String : Any] = ["stripeToken" : token.tokenId, "amount" : amount, "description" : Constants.defaultDescription, "currency" : Constants.defaultCurrency]
-        
-        AF.request(url, method: .post, parameters: params).validate(statusCode: 200..<300).responseData { (response) in
-            
-            switch response.result {
-            case .success( _):
-                print("Payment successful")
-                completion(nil)
-            case .failure(let error):
-                print("error processing the payment", error.localizedDescription)
-                completion(error)
+        let serializer = DataResponseSerializer(emptyResponseCodes: Set([200,204,205]))
+        AF.request(url, method: .post, parameters: params)
+            .validate(statusCode: 200..<300)
+            .response(responseSerializer: serializer) { (response) in
+                print(response)
+
+                switch response.result {
+                case .success( _):
+                    print("Payment successful")
+                    completion(nil)
+                case .failure(let error):
+                    if (response.data?.count)! > 0 {print(error)}
+
+                    if let data = response.data, let str = String(data: data, encoding: String.Encoding.utf8){
+                        print("Server Error: " + str)
+                    }
+                    completion(error)
+                }
+
             }
+
         }
     }
-
-    
-    
-}

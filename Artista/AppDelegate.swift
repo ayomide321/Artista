@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         STPPaymentConfiguration.shared().publishableKey = Constants.publishableKey
-
+        StripeClient.sharedClient.baseURLString = Constants.baseURLString
         
     }
 
